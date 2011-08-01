@@ -1,4 +1,4 @@
-			<div id="header"ª
+			<div id="header">
 				
 				<?php if ($is_front): ?>
 					<h1 id="logo"><?php print l($site_name, '', array('attributes' => array('title' => $site_name))); ?></h1>
