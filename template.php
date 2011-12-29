@@ -13,7 +13,13 @@ function yourtheme_preprocess_node(&$vars) {
  */
 function yourtheme_form($variables) {
   $element = $variables['element'];
-  
+  if (isset($element['#action'])) {
+    $element['#attributes']['action'] = drupal_strip_dangerous_protocols($element['#action']);
+  }
+  element_set_attributes($element, array('method', 'id'));
+  if (empty($element['#attributes']['accept-charset'])) {
+    $element['#attributes']['accept-charset'] = "UTF-8";
+  }
   // Removing anonymous and useless <div> wrapping inside forms
   return '<form' . drupal_attributes($element['#attributes']) . '>' . $element['#children'] . '</form>';
 }
