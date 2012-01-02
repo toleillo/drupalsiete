@@ -3,9 +3,12 @@
 /**
  * Implementation of node preprocess
  */
-function yourtheme_preprocess_node(&$vars) {
+function yourtheme_preprocess_node(&$variables) {
 	// Creating new theme suggestion for node teasers
-	$vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
+	$variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->type . '__' . $variables['view_mode'];
+	
+	// Addding a clearfix to the classes array
+	$variables['classes_array'][] = 'clearfix';
 }
 
 /**
@@ -22,4 +25,15 @@ function yourtheme_form($variables) {
   }
   // Removing anonymous and useless <div> wrapping inside forms
   return '<form' . drupal_attributes($element['#attributes']) . '>' . $element['#children'] . '</form>';
+}
+
+/**
+ * Implementation hook_preprocess_views_view()
+ */
+function yourtheme_preprocess_views_view(&$variables) {
+	// Adding a clearfix to the classes array
+	$variables['classes_array'][] = 'clearfix';
+	
+	// Adding a better name to use as the view id
+	$variables['view_name'] = $variables['view']->name . '-' . $variables['view']->current_display;
 }
