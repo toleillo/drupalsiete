@@ -4,11 +4,17 @@
  * Implementation of node preprocess
  */
 function yourtheme_preprocess_node(&$variables) {
-	// Creating new theme suggestion for node teasers
+	// Creating new theme suggestion for node teasers (for example: node--nodetype--teaser.tpl.php)
 	$variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->type . '__' . $variables['view_mode'];
-	
-	// Addding a clearfix to the classes array
-	$variables['classes_array'][] = 'clearfix';
+		
+	// Rewriting node classes array
+	$variables['classes_array'] = array();
+	$variables['classes_array'] = array(
+		'node',
+		'node-' . $variables['node']->type,
+		'node-' . $variables['node']->type . '-' . $variables['view_mode'],
+		'clearfix'
+	);
 }
 
 /**
