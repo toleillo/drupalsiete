@@ -1,6 +1,6 @@
 		<div id="wrapper" class="layout-default">
 			
-			<?php include_once(drupal_get_path('theme', 'drupalsiete') . "/templates/layout/inc/header.inc"); ?>
+			<?php include_once("includes/header.inc"); ?>
 	    
 	    <div id="container">
 				

@@ -3,7 +3,7 @@
 /**
  * Implementation hook_preprocess_views_view()
  */
-function yourtheme_preprocess_views_view(&$variables) {
+function drupalsiete_preprocess_views_view(&$variables) {
 	// Rewriting views classes array
 	$variables['classes_array'] = array();
 	$variables['classes_array'] = array(
