@@ -41,7 +41,7 @@ function drupalsiete_item_list($variables) {
   $title = $variables['title'];
   $type = $variables['type'];
   $attributes = $variables['attributes'];
-  $output = ''
+  $output = '';
 
   if (isset($title)) {
     $output .= '<div class="item-list">';
