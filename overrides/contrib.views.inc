@@ -9,6 +9,7 @@ function drupalsiete_preprocess_views_view(&$variables) {
 	$variables['classes_array'] = array(
 		'view',
 		'view-' . $variables['view']->name,
+		'view-dom-id-' . $variables['dom_id'],
 		'clearfix'
 	);
 	
