@@ -18,7 +18,7 @@
 .wk-col-r { display:inline; float:right; }
 
 /* Class for hidding elements if JavaScript is enabled */
-html.js .hidden { display:none; }
+html.js body .hidden { display:none; }
 
 /* Clearfix trick to clear floated elements */
 .clearfix:after { content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0; }
