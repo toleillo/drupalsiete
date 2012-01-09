@@ -1,25 +1,36 @@
 /*
- * Developed by ... (ideup!)
+ * Developed by ...
+ * Based on drupalsiete starter theme: https://github.com/sergiocerrutti/drupalsiete
  */
 
 
-/*MISC
+/*WORKERS
 ----------------------------------------------------------------------------------------------------------*/
 
-.wk-img { float:left; }
-	.wk-img img { display:block; }
-.wk-txt { display:table-cell; zoom:1; }
+/* Media elements, image + text */
+.wk-media-l { float:left; }
+	.wk-media-l img,
+	.wk-media-r img { display:block; }
+.wk-media-r { display:table-cell; zoom:1; }
 
-.wk-col-l { float:left; display:inline; }
-.wk-col-r { float:right; display:inline; }
+/* Columns */
+.wk-col-l { display:inline; float:left; }
+.wk-col-r { display:inline; float:right; }
 
-.wk-icon { background-color:transparent; background-repeat:no-repeat; text-indent:-9999px; display:inline-block; }
+/* Class for hidding elements if JavaScript is enabled */
+html.js .hidden { display:none; }
 
+/* Clearfix trick to clear floated elements */
 .clearfix:after { content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0; }
 .clearfix { display:inline-block; }
 html[xmlns] .clearfix { display:block; }
 * html .clearfix { height:1%; }
 
+
+/*MISC
+----------------------------------------------------------------------------------------------------------*/
+
+/* Drupal messages */
 div.help,
 div.messages { font-size:1.2em; line-height:1.275em; text-align:justify; padding:15px 15px 15px 45px !important; border:5px solid #fff !important; margin-bottom:20px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -moz-box-shadow:0px 1px 3px 0 #ddd; -webkit-box-shadow:0px 1px 3px 0 #ddd; box-shadow:0px 1px 3px 0 #ddd; overflow:hidden; }
 .help, div.status { background-color:#ECF8F4; color:#668877; }
