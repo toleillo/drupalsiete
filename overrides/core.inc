@@ -137,13 +137,13 @@ function drupalsiete_pager(&$variables) {
   if ($pager_total[$element] > 1) {
     if ($li_first) {
       $items[] = array(
-        'class' => array('pager-first'), 
+        'class' => array('pager-nav', 'pager-first'), 
         'data' => $li_first,
       );
     }
     if ($li_previous) {
       $items[] = array(
-        'class' => array('pager-previous'), 
+        'class' => array('pager-nav', 'pager-previous'), 
         'data' => $li_previous,
       );
     }
@@ -187,13 +187,13 @@ function drupalsiete_pager(&$variables) {
     // End generation.
     if ($li_next) {
       $items[] = array(
-        'class' => array('pager-next'), 
+        'class' => array('pager-nav', 'pager-next'), 
         'data' => $li_next,
       );
     }
     if ($li_last) {
       $items[] = array(
-        'class' => array('pager-last'), 
+        'class' => array('pager-nav', 'pager-last'), 
         'data' => $li_last,
       );
     }
