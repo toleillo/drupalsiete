@@ -26,7 +26,7 @@
  * @ingroup views_templates
  */
 ?>
-<div id="<?php print $view_name; ?>" class="<?php print $classes; ?>">
+<div id="<?php print $view_name; ?>" class="<?php print $classes; ?><?php print (isset($css_class)) ? ' ' . $css_class : ''; ?>">
   
   <?php if ($title): ?>
     <?php print $title; ?>
